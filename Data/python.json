@@ -1,0 +1,19 @@
+[{
+    "id":1,
+    "open":"Open_Source",
+    "name":"Mouse-And-Eye",
+    "desc":"Mouse and eye this is very awesome project. in this project i use python and it's some build in functions.Mouse and eye is used for those people who does not have the hand means those people who are handicap so. they can operate the pc with the help of their eyes.",
+    "img":"https://static.vecteezy.com/system/resources/previews/004/885/875/original/ai-artificial-intelligence-concept-ai-digital-brain-abstract-digital-human-face-human-head-in-robot-digital-computer-interpretation-robotics-concept-wireframe-head-concept-illustration-vector.jpg",
+    "app_link":"https://github.com/Abhishekkuntare/Mouse-And-Eye",
+    "git_img":"/images/git.png"
+},
+    {"id":2,
+    "open":"Open_Source",
+    "name":"QR-Code-Generator",
+    "desc":"QR-Code-Generator is used to convert any web app link / app link / github link to QR-Code. And that generated QR code is  scan in any device ",
+    "img":"https://images.unsplash.com/photo-1629128625414-374a9e16d56a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "app_link":"https://github.com/Abhishekkuntare/QR-Code-Generator",
+    "git_img":"/images/git.png"
+}
+
+]

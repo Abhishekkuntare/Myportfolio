@@ -1,0 +1,13 @@
+[
+    {
+        "id":1,
+        "name":"The Last Book",
+        "desc":"The last book is a book recommendation web app. if you confused about what i read? so this system is recommended you for reading books .",
+        "img":"/images/machine/img1.png",
+        "web_link":"https://books-earth.herokuapp.com/",
+        "stack":"Flask, Numpy,Pandas,DataSet,Anaconda,Jupyter Notebook, basic html ,css,bootstrap,",
+        "host":"Heroku"
+        
+        
+    }
+]

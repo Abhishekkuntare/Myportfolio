@@ -1,0 +1,9 @@
+node_modules
+.next
+dist
+.vercel
+.env
+{/*992px, 768px,480px,base */}
+    {/* sm,md,lg,xl */}
+
+dev -H 0.0.0.0
