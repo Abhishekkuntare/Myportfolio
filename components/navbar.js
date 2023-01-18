@@ -15,15 +15,14 @@ import {
   useColorModeValue,
   Button,
   MenuGroup,
-  MenuDivider
+  MenuDivider,
+  Text
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
-import { toast, ToastContainer } from 'react-toastify'
+import { useState } from 'react'
 import 'react-toastify/dist/ReactToastify.css'
-
+import useSound from 'use-sound'
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
@@ -43,35 +42,27 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
 }
 
 const Navbar = props => {
-  const router = useRouter()
-  const [user, setUser] = useState({ value: null })
-  // const [key, setKey] = useState(0)
-
-  useEffect(() => {
-    const myuser = JSON.parse(localStorage.getItem('myuser'))
-    if (myuser) {
-      setUser({ value: myuser.token, email: myuser.email })
-    }
-    // setKey(Math.random())
-  }, [router.query])
-
-  // logout
-  const logout = () => {
-    localStorage.removeItem('myuser')
-    setUser({ value: null })
-    // setKey(Math.random())
-    toast.success('You are successfully loged out!', {
-      position: 'top-center',
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined
-    })
-    router.push('/')
-  }
   const { path } = props
+  const soundUrl = '/sounds/s1.wav'
+  const soundUrl2 = 'sounds/s6.wav'
+  const [playbackRate, setPlaybackRate] = useState(0)
+
+  const [play2] = useSound(soundUrl2, {
+    playbackRate,
+    volume: 0.5
+  })
+  const [play] = useSound(soundUrl, {
+    playbackRate,
+    volume: 0.5
+  })
+
+  const handleClick = () => {
+    play()
+  }
+
+  const handleClick2 = () => {
+    play2()
+  }
 
   return (
     <Box
@@ -83,18 +74,6 @@ const Navbar = props => {
       zIndex={1}
       {...props}
     >
-      <ToastContainer
-        position="bottom-center"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-
       <Container
         display="flex"
         p={2}
@@ -104,7 +83,12 @@ const Navbar = props => {
         justify="space-between"
       >
         <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+          <Heading
+            as="h1"
+            size="lg"
+            letterSpacing={'tighter'}
+            onClick={handleClick2}
+          >
             <Logo />
           </Heading>
         </Flex>
@@ -118,39 +102,17 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/projects" path={path}>
-            Works
+            <Text onClick={handleClick}>Works</Text>
           </LinkItem>
           <LinkItem href="/posts" path={path}>
-            Posts
+            <Text onClick={handleClick}>Posts</Text>
           </LinkItem>
           <LinkItem href="/works" path={path}>
-            Web
+            <Text onClick={handleClick}>Web</Text>
           </LinkItem>
           <LinkItem href="/androidWorks" path={path}>
-            App
+            <Text onClick={handleClick}>App</Text>
           </LinkItem>
-
-          {user.value && (
-            <Menu>
-              <MenuButton
-                rounded="0"
-                as={Button}
-                color="#9FD0C6"
-                colorScheme="none"
-              >
-                Profile
-              </MenuButton>
-              <MenuList>
-                <MenuGroup title="Profile">
-                  <Link href="/myaccount">
-                    <MenuItem>My Account</MenuItem>
-                  </Link>
-                  <MenuItem onClick={logout}>Logout </MenuItem>
-                </MenuGroup>
-                <MenuDivider />
-              </MenuList>
-            </Menu>
-          )}
         </Stack>
 
         {/* for mobile ------------------------------------------------- */}
@@ -167,16 +129,24 @@ const Navbar = props => {
               />
               <MenuList>
                 <NextLink href="/projects" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
+                  <MenuItem onClick={handleClick} as={Link}>
+                    Works
+                  </MenuItem>
                 </NextLink>
                 <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
+                  <MenuItem onClick={handleClick} as={Link}>
+                    Posts
+                  </MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Web</MenuItem>
+                  <MenuItem onClick={handleClick} as={Link}>
+                    Web
+                  </MenuItem>
                 </NextLink>
                 <NextLink href="/androidWorks" passHref>
-                  <MenuItem as={Link}>App</MenuItem>
+                  <MenuItem onClick={handleClick} as={Link}>
+                    App
+                  </MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>
