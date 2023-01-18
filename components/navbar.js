@@ -13,9 +13,6 @@ import {
   MenuButton,
   IconButton,
   useColorModeValue,
-  Button,
-  MenuGroup,
-  MenuDivider,
   Text
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
@@ -61,6 +58,7 @@ const Navbar = props => {
   }
 
   const handleClick2 = () => {
+    setPlaybackRate(playbackRate + 0.1)
     play2()
   }
 
