@@ -1,5 +1,4 @@
 import {
-  Badge,
   Button,
   Heading,
   Image,
@@ -8,12 +7,11 @@ import {
   ModalCloseButton,
   ModalContent,
   ModalFooter,
-  ModalHeader,
   ModalOverlay,
   useDisclosure
 } from '@chakra-ui/react'
 
-function ManualClose({ name, image, id }) {
+function ManualClose({ name, image }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -30,19 +28,15 @@ function ManualClose({ name, image, id }) {
       <Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <Heading
-            padding={10}
-            fontSize={30}
-            fontFamily={'M+PLUS+Rounded+1'}
-            children={name}
-          />
+          <Heading padding={10} fontSize={30} fontFamily={'M+PLUS+Rounded+1'}>
+            {name}
+          </Heading>
           <ModalCloseButton />
           <ModalBody pb={6}>
-            <Image src={image} />
+            <Image src={image} alt="name" />
           </ModalBody>
 
           <ModalFooter>
-            <Badge></Badge>
             <Button onClick={onClose}>Cancel</Button>
           </ModalFooter>
         </ModalContent>

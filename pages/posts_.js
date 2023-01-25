@@ -8,7 +8,6 @@ import {
   HStack,
   useColorModeValue,
   Container,
-  Badge,
   Button
 } from '@chakra-ui/react'
 import ManualClose from '../components/modal'
@@ -28,7 +27,7 @@ export const BlogAuthor = props => {
   )
 }
 
-const ArticleList = ({ name, image, title, desc, author, date, color, id }) => {
+const ArticleList = ({ name, image, title, desc, color, id }) => {
   return (
     <>
       <Container maxW={'7xl'} p="12">

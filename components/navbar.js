@@ -13,7 +13,8 @@ import {
   MenuButton,
   IconButton,
   useColorModeValue,
-  Text
+  Text,
+  Button
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
@@ -41,13 +42,8 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
 const Navbar = props => {
   const { path } = props
   const soundUrl = '/sounds/s1.wav'
-  const soundUrl2 = 'sounds/s6.wav'
   const [playbackRate, setPlaybackRate] = useState(0)
 
-  const [play2] = useSound(soundUrl2, {
-    playbackRate,
-    volume: 0.5
-  })
   const [play] = useSound(soundUrl, {
     playbackRate,
     volume: 0.5
@@ -57,7 +53,9 @@ const Navbar = props => {
     play()
   }
 
-
+  const consoleit = () => {
+    setPlaybackRate()
+  }
 
   return (
     <Box
@@ -79,7 +77,9 @@ const Navbar = props => {
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Logo />
+            <Text onClick={consoleit}>
+              <Logo />
+            </Text>
           </Heading>
         </Flex>
 
@@ -112,6 +112,7 @@ const Navbar = props => {
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
+                set
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"

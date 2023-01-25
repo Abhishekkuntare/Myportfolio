@@ -8,7 +8,6 @@ import {
   List,
   ListItem,
   Icon,
-  useColorModeValue,
   Link
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -19,7 +18,6 @@ import Section from '../components/section'
 import { IoLogoGithub, IoCodeSharp, IoLogoLinkedin } from 'react-icons/io5'
 import { BiCodeCurly } from 'react-icons/bi'
 import { useEffect, useState } from 'react'
-// import { Loader } from '@react-three/drei'
 import Loaderr from '../components/Loaderr'
 
 function Home() {
@@ -41,7 +39,7 @@ function Home() {
           mb={6}
           p={3}
           textAlign="center"
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          // bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         >
           Hello, I&apos;m
         </Box>
