@@ -8,7 +8,7 @@ const Posts = () => {
         id={1}
         name={'World of Technologies'}
         image={
-          'https://i.pinimg.com/736x/f6/fb/4e/f6fb4e096a8956726541c10ba8a23a8f.jpg'
+          'https://codesandbox.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Feditors.3475b465.png&w=3840&q=100'
         }
         title={'New Technologies'}
         desc={
@@ -46,7 +46,7 @@ const Posts = () => {
         id={4}
         name={'Mac ui change for coding'}
         image={
-          'https://saas-ui.dev/_ipx/w_1920,q_75/%2Fscreenshots%2Flist.png?url=%2Fscreenshots%2Flist.png&w=1920&q=75'
+          'https://codesandbox.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage.4a712740.png&w=3840&q=75'
         }
         title={'Mac - Ui'}
         desc={

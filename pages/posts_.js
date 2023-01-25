@@ -8,8 +8,10 @@ import {
   HStack,
   useColorModeValue,
   Container,
-  Badge
+  Badge,
+  Button
 } from '@chakra-ui/react'
+import ManualClose from '../components/modal'
 
 export const BlogAuthor = props => {
   return (
@@ -92,7 +94,7 @@ const ArticleList = ({ name, image, title, desc, author, date, color, id }) => {
             >
               {desc}
             </Text>
-            <Badge
+            <Button
               fontSize="0.8em"
               borderRadius={5}
               marginTop={3}
@@ -100,8 +102,8 @@ const ArticleList = ({ name, image, title, desc, author, date, color, id }) => {
               colorScheme={color}
               variant="outline"
             >
-              {author} - {date}
-            </Badge>
+              <ManualClose id={id} name={name} image={image} />
+            </Button>
           </Box>
         </Box>
       </Container>

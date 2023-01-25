@@ -57,10 +57,7 @@ const Navbar = props => {
     play()
   }
 
-  const handleClick2 = () => {
-    setPlaybackRate(playbackRate + 0.1)
-    play2()
-  }
+
 
   return (
     <Box
@@ -69,7 +66,7 @@ const Navbar = props => {
       w="100%"
       bg={useColorModeValue('#ffffff40', '#20202380')}
       css={{ backdropFilter: 'blur(10px)' }}
-      zIndex={1}
+      zIndex={100}
       {...props}
     >
       <Container
@@ -81,12 +78,7 @@ const Navbar = props => {
         justify="space-between"
       >
         <Flex align="center" mr={5}>
-          <Heading
-            as="h1"
-            size="lg"
-            letterSpacing={'tighter'}
-            onClick={handleClick2}
-          >
+          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
             <Logo />
           </Heading>
         </Flex>
