@@ -84,7 +84,7 @@ function Home() {
           <Box align="center" my={4}>
             <NextLink href="https://abhishekkuntare2002.web.app/">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                My portfolio
+                Check It
               </Button>
             </NextLink>
           </Box>

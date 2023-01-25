@@ -12,6 +12,8 @@ import textutilis from '../public/images/works/textutilis.png'
 import lambo from '../public/images/works/lambo.png'
 import p2 from '../public/images/works/p2.png'
 import po3 from '../public/images/works/po3.webp'
+import po4 from '../public/images/works/po4.webp'
+import m1 from '../public/images/works/m1.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -21,6 +23,18 @@ const Works = () => (
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <Section>
+          <WorkGridItem id="madebyme" title="Madebyme" thumbnail={m1}>
+            Madebyme is web app that is provided all you need about courses and
+            lectures.
+          </WorkGridItem>
+        </Section>
+        <Section>
+          <WorkGridItem id="xcrypto" title="XCrypto" thumbnail={po4}>
+            XCrypto is the web app which gives the information about Bitcoins
+            and Exchanges
+          </WorkGridItem>
+        </Section>
         <Section>
           <WorkGridItem id="pokemon" title="Pokemon" thumbnail={po3}>
             Pokemon is just a information about all the pokemons including
