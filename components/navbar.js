@@ -93,14 +93,17 @@ const Navbar = props => {
           <LinkItem href="/projects" path={path}>
             <Text onClick={handleClick}>Works</Text>
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            <Text onClick={handleClick}>Posts</Text>
-          </LinkItem>
           <LinkItem href="/works" path={path}>
             <Text onClick={handleClick}>Web</Text>
           </LinkItem>
           <LinkItem href="/androidWorks" path={path}>
             <Text onClick={handleClick}>App</Text>
+          </LinkItem>
+          <LinkItem href="/posts" path={path}>
+            <Text onClick={handleClick}>Posts</Text>
+          </LinkItem>
+          <LinkItem href="/courses" path={path}>
+            <Text onClick={handleClick}>Courses</Text>
           </LinkItem>
         </Stack>
 
@@ -123,11 +126,6 @@ const Navbar = props => {
                     Works
                   </MenuItem>
                 </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem onClick={handleClick} as={Link}>
-                    Posts
-                  </MenuItem>
-                </NextLink>
                 <NextLink href="/works" passHref>
                   <MenuItem onClick={handleClick} as={Link}>
                     Web
@@ -136,6 +134,16 @@ const Navbar = props => {
                 <NextLink href="/androidWorks" passHref>
                   <MenuItem onClick={handleClick} as={Link}>
                     App
+                  </MenuItem>
+                </NextLink>
+                <NextLink href="/posts" passHref>
+                  <MenuItem onClick={handleClick} as={Link}>
+                    Posts
+                  </MenuItem>
+                </NextLink>{' '}
+                <NextLink href="/courses" passHref>
+                  <MenuItem onClick={handleClick} as={Link}>
+                    Courses
                   </MenuItem>
                 </NextLink>
               </MenuList>

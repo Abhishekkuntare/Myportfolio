@@ -7,7 +7,6 @@ const ThemeToggleButton = () => {
   const { toggleColorMode } = useColorMode()
 
   const [isChecked, setIsChecked] = useState(false)
-  // const [playActive] = useSound('/sounds/s1.wav', { volume: 0.25 })
   const [playOn] = useSound('/sounds/s4.wav', { volume: 0.25 })
   const [playOff] = useSound('/sounds/s5.wav', { volume: 0.25 })
 
@@ -31,7 +30,6 @@ const ThemeToggleButton = () => {
             isChecked ? playOff() : playOn()
           }}
           aria-label="Toggle theme"
-          colorScheme={useColorModeValue('blue', 'yellow')}
           icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
           onClick={toggleColorMode}
         ></IconButton>

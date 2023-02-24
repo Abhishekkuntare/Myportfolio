@@ -12,13 +12,13 @@ import {
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoGithub, IoCodeSharp, IoLogoLinkedin } from 'react-icons/io5'
 import { BiCodeCurly } from 'react-icons/bi'
 import { useEffect, useState } from 'react'
 import Loaderr from '../components/Loaderr'
+import TimeLine from '../components/timeLine'
 
 function Home() {
   const [loaded, setLoaded] = useState(false)
@@ -76,13 +76,17 @@ function Home() {
             Intro
           </Heading>
           <Paragraph>
-            My Self Abhishek P. Kuntare I am a Software Developer from Amravati.
-            I am Programming enthusiast. I am quick learner and ready to take
-            new challenges
+            My name is Abhishek P. Kuntare I am a Software Developer from
+            Amravati. Im an experienced software engineer who constantly seeks
+            out innovative solutions to everyday problems. In my 3 years in this
+            field, Ive honed my analytical thinking and collaboration skills,
+            and I love working with a team. Ive also had the opportunity to
+            serve as the software engineer lead for three projects with First
+            Technology.
           </Paragraph>
 
           <Box align="center" my={4}>
-            <NextLink href="https://abhishekkuntare2002.web.app/">
+            <NextLink href="https://abhishekkuntare2002.web.app/start">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 Check It
               </Button>
@@ -90,34 +94,16 @@ function Home() {
           </Box>
         </Section>
 
-        <Section delay={0.2}>
-          <Heading as="h3" variant="section-title">
-            Bio
-          </Heading>
-          <BioSection>
-            <BioYear>2002</BioYear>
-            Born in Amravati, Maharashtra.
-          </BioSection>
-          <BioSection>
-            <BioYear>2013-2018</BioYear>
-            <i> SSCE X -</i> Shree Ram Krushna Krida Vidyalaya.
-          </BioSection>
-          <BioSection>
-            <BioYear>2019-2020</BioYear>
-            <i>HSCE XII</i> - Rural institute of JR College.
-          </BioSection>
-          <BioSection>
-            <BioYear>2021-2024</BioYear>
-            <i>B.Tech IT - </i> Prof.Ram Meghe Institute of Technology and
-            Research
-          </BioSection>
-        </Section>
+        <TimeLine />
+        {/* <Hobbies /> */}
 
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
             I ♥
           </Heading>
-          <Paragraph>Programming, Solving Cubes, Playing Football</Paragraph>
+          <Paragraph>
+            Solving Cubes, Listening to music,Playing Football
+          </Paragraph>
         </Section>
 
         <Section delay={0.3}>
