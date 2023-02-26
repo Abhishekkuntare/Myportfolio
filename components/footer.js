@@ -5,7 +5,6 @@ import {
   SimpleGrid,
   Text,
   Link,
-  useColorModeValue,
   Button,
   Image,
   Heading
@@ -83,14 +82,10 @@ export default function LargeWithAppLinksAndSocial() {
       <Image
         width={[1800, 800]}
         src="https://www.joyofreact.com/images/question-mobile.svg"
-        alt='img'
+        alt="img"
       />
 
-      <Box
-        borderTopWidth={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.700')}
-      >
+      <Box borderTopWidth={1} borderStyle={'solid'}>
         <Container
           as={Stack}
           maxW={'6xl'}

@@ -26,7 +26,7 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
           <WorkGridItem id="ambamotors" title="Amba Motors" thumbnail={am3}>
-            Amba is my First Startup and eventiually this is my Father's
+            Amba is my First Startup and eventiually this is my Father{"'"}s
             workshop webapp so that{"'"}s why i{"'"}m really exited.
           </WorkGridItem>
         </Section>
