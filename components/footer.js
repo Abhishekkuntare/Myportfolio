@@ -10,10 +10,23 @@ import {
   Image,
   Heading
 } from '@chakra-ui/react'
+import { useEffect } from 'react'
+import { useState } from 'react'
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa'
+import Loaderr from './Loaderr'
 
 export default function LargeWithAppLinksAndSocial() {
-  return (
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    let timer = setTimeout(() => setLoaded(true), 2000)
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [])
+  return !loaded ? (
+    <Loaderr />
+  ) : (
     <Box>
       <Container
         as={Stack}
@@ -21,8 +34,8 @@ export default function LargeWithAppLinksAndSocial() {
         py={10}
         m={'auto'}
         display="flex"
-        alignItems={'center'}
-        justifyContent={'center'}
+        alignItems={['left', 'center']}
+        justifyContent={['left', 'center']}
       >
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={'flex-start'}>
@@ -60,13 +73,18 @@ export default function LargeWithAppLinksAndSocial() {
 
           <Stack align={'flex-start'}>
             <Image
-              width={[150, 300]}
+              width={[100, 100]}
               src="https://www.joshwcomeau.com/assets/me-light.webp"
               alt="img"
             />
           </Stack>
         </SimpleGrid>
       </Container>
+      <Image
+        width={[1800, 800]}
+        src="https://www.joyofreact.com/images/question-mobile.svg"
+        alt='img'
+      />
 
       <Box
         borderTopWidth={1}

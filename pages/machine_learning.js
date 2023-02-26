@@ -21,8 +21,7 @@ const machine_learning = () => {
               <List ml={4} my={4}>
                 <ListItem>
                   <Meta>Website</Meta>
-                  <Link href={data.web_link}>
-                    {data.web_link}
+                  <Link href={'/soon'}>
                     <ExternalLinkIcon mx="2px" />
                   </Link>
                 </ListItem>

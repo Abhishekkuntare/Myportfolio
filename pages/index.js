@@ -35,11 +35,14 @@ function Home() {
     <Layout>
       <Container>
         <Box
-          borderRadius="lg"
           mb={6}
+          mt={10}
           p={3}
+          fontSize={'lg'}
           textAlign="center"
-          // bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          fontFamily={'Luxurious Roman'}
+          fontWeight={'bold'}
+          borderRadius="lg"
         >
           Hello, I&apos;m
         </Box>
@@ -86,9 +89,9 @@ function Home() {
           </Paragraph>
 
           <Box align="center" my={4}>
-            <NextLink href="https://abhishekkuntare2002.web.app/start">
+            <NextLink href="https://abhishekkuntare3d.vercel.app/">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                Check It
+                3D
               </Button>
             </NextLink>
           </Box>
@@ -183,7 +186,7 @@ function Home() {
             </ListItem>
           </List>
 
-          <Box align="center" my={4}>
+          <Box align={['left', 'center']} my={4}>
             <NextLink href="/posts">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 Popular posts

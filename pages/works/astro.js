@@ -20,8 +20,8 @@ const Work = () => (
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://astro-ecommerce.herokuapp.com/">
-            https://astro-ecommerce.herokuapp.com/ <ExternalLinkIcon mx="2px" />
+          <Link href="/soon">
+            <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>

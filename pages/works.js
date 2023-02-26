@@ -14,6 +14,7 @@ import p2 from '../public/images/works/p2.png'
 import po3 from '../public/images/works/po3.webp'
 import po4 from '../public/images/works/po4.webp'
 import m1 from '../public/images/works/m1.png'
+import am3 from '../public/images/works/am1.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -23,6 +24,12 @@ const Works = () => (
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <Section>
+          <WorkGridItem id="ambamotors" title="Amba Motors" thumbnail={am3}>
+            Amba is my First Startup and eventiually this is my Father's
+            workshop webapp so that{"'"}s why i{"'"}m really exited.
+          </WorkGridItem>
+        </Section>
         <Section>
           <WorkGridItem id="madebyme" title="Madebyme" thumbnail={m1}>
             Madebyme is web app that is provided all you need about courses and
