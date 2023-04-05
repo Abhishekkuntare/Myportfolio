@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import android from '../Data/android.json'
-
+import git from '../public/images/androidApp/git.png'
 const IMAGE =
   'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
 
@@ -65,6 +65,7 @@ function AndroidWorks() {
               <Stack pt={10} align={'center'}>
                 <Badge borderRadius={3} padding={1}>
                   <Text
+                    padding={2}
                     color={'gray.500'}
                     fontSize={'sm'}
                     textTransform={'uppercase'}
@@ -86,6 +87,9 @@ function AndroidWorks() {
                       <Link href={data.app_link}>Download</Link>
                     </Text>
                   </Button>
+                  <Link href={data.git_link}>
+                    <Image width={30} height={30} src={data.git} alt="git" />
+                  </Link>
                 </Stack>
               </Stack>
             </Box>

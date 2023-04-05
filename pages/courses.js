@@ -34,6 +34,7 @@ const courses = () => {
         CSS for JavaScript Developers
       </Text>
 
+
       <Box
         mt={10}
         padding={5}
@@ -70,7 +71,7 @@ const courses = () => {
           alt="img"
         />
       </Box>
-
+<Context name="this is the main"/>
       <Box
         mt={10}
         padding={5}

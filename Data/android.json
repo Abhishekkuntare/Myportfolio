@@ -1,7 +1,31 @@
-[{
+[
+    
+    {
     "id":1,
     "name":"crypto-pronef",
     "desc":"crypto-pronef is the ui based app i'm still working on it",
     "img":"/images/androidApp/an_img.png",
-    "app_link":"https://expo.dev/accounts/abhishekkuntare/projects/pronef/builds/4d7f8b38-b79e-46a7-a946-daa67e7ea037"
-}]
+    "git":"/images/androidApp/git.png",
+    "app_link":"/soon",
+    "git_link":""
+},
+    {
+    "id":2,
+    "name":"To-Do-App",
+    "desc":"Let's say that we've been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. ",
+    "img":"/images/androidApp/to.jpg",
+    "git":"/images/androidApp/git.png",
+    "app_link":"/soon",
+    "git_link":""
+},
+    {
+    "id":3,
+    "name":"Foodie",
+    "desc":"Foodie provides information, menus and user-reviews of restaurants as well as food delivery options from partner restaurants in more than 1,000 Indian cities, as of 2022.",    
+    "img":"/images/androidApp/foodie.jpg",
+    "git":"/images/androidApp/git.png",
+    "app_link":"/soon",
+    "git_link":""
+}
+
+]
