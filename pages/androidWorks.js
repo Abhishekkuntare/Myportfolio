@@ -85,7 +85,7 @@ function AndroidWorks() {
                     }}
                   >
                     <Text fontWeight={500} fontSize={18}>
-                      <a target="_blank" href={data.git_link}>
+                      <a target="_blank" rel="noreferrer" href={data.git_link}>
                         Download
                       </a>
                     </Text>
@@ -99,7 +99,11 @@ function AndroidWorks() {
                       }}
                     >
                       <Text fontWeight={500} fontSize={18}>
-                        <a target="_blank" href={data.git_link}>
+                        <a
+                          rel="noreferrer"
+                          target="_blank"
+                          href={data.git_link}
+                        >
                           Source Code
                         </a>
                       </Text>

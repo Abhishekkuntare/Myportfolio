@@ -107,12 +107,17 @@ export default function LargeWithAppLinksAndSocial() {
               </a>
             </Button>
             <Button>
-              <a target="_blank" href={'https://github.com/Abhishekkuntare'}>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href={'https://github.com/Abhishekkuntare'}
+              >
                 <FaGithub />
               </a>
             </Button>
             <Button>
               <a
+                rel="noreferrer"
                 target='"_blank'
                 label={'Instagram'}
                 href={'https://www.instagram.com/abhishekkuntare/'}
