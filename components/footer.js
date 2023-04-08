@@ -97,23 +97,28 @@ export default function LargeWithAppLinksAndSocial() {
         >
           <Text>© 2023- present Abhishek Kuntare. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
-            <Button
-              label={'Twitter'}
-              href={'/https://www.linkedin.com/in/abhishek-kuntare-65662421b/'}
-            >
-              <FaLinkedin />
+            <Button>
+              <a
+                target='"_blank'
+                label={'Twitter'}
+                href={'https://www.linkedin.com/in/abhishek-kuntare-65662421b/'}
+              >
+                <FaLinkedin />
+              </a>
             </Button>
-            <Button
-              label={'YouTube'}
-              href={'/https://github.com/Abhishekkuntare'}
-            >
-              <FaGithub />
+            <Button>
+              <a target="_blank" href={'https://github.com/Abhishekkuntare'}>
+                <FaGithub />
+              </a>
             </Button>
-            <Button
-              label={'Instagram'}
-              href={'/https://www.instagram.com/abhishek__kuntare/'}
-            >
-              <FaInstagram />
+            <Button>
+              <a
+                target='"_blank'
+                label={'Instagram'}
+                href={'https://www.instagram.com/abhishekkuntare/'}
+              >
+                <FaInstagram />
+              </a>
             </Button>
           </Stack>
         </Container>

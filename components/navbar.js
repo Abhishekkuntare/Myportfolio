@@ -13,13 +13,15 @@ import {
   MenuButton,
   IconButton,
   useColorModeValue,
-  Text
+  Text,
+  Button
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { useState } from 'react'
 import 'react-toastify/dist/ReactToastify.css'
 import useSound from 'use-sound'
+
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')

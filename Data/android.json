@@ -16,7 +16,7 @@
     "img":"/images/androidApp/to.jpg",
     "git":"/images/androidApp/git.png",
     "app_link":"/soon",
-    "git_link":""
+    "git_link":"https://github.com/Abhishekkuntare/Reactnative_app_todo"
 },
     {
     "id":3,
@@ -25,7 +25,7 @@
     "img":"/images/androidApp/foodie.jpg",
     "git":"/images/androidApp/git.png",
     "app_link":"/soon",
-    "git_link":""
+    "git_link":"https://github.com/Abhishekkuntare/Reactnative_food_app"
 }
 
 ]

@@ -79,21 +79,37 @@ function Home() {
             Intro
           </Heading>
           <Paragraph>
-            My name is Abhishek P. Kuntare I am a Software Developer from
-            Amravati. Im an experienced software engineer who constantly seeks
-            out innovative solutions to everyday problems. In my 3 years in this
-            field, Ive honed my analytical thinking and collaboration skills,
-            and I love working with a team. Ive also had the opportunity to
-            serve as the software engineer lead for three projects with First
-            Technology.
+            My name is Abhishek P. Kuntare I{"'"}m a Software Developer from
+            Amravati. I{"'"}m an experienced FullStack web Developer engineer
+            who constantly seeks out innovative solutions to everyday problems
+            in my daily life. In my 3+ years in this field, I{"'"}ve honed my
+            analytical thinking and collaboration skills, and I love working
+            with a team. I am a quick learner and ready to take new challenges.
           </Paragraph>
 
-          <Box align="center" my={4}>
+          <Box
+            align="center"
+            my={4}
+            display={'flex'}
+            alignItems={'center'}
+            justifyContent={'center'}
+            flexDirection={'column'}
+          >
             <NextLink href="https://abhishekkuntare3d.vercel.app/">
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              <Button
+                mb={5}
+                rightIcon={<ChevronRightIcon />}
+                colorScheme="teal"
+              >
                 3D
               </Button>
             </NextLink>
+
+            <a href="AbhishekKuntare.pdf" download="AbhishekKuntare.pdf">
+              <Button backgroundColor={'#00C9A7'} color={'white'}>
+                Resume
+              </Button>
+            </a>
           </Box>
         </Section>
 
@@ -105,7 +121,7 @@ function Home() {
             I ♥
           </Heading>
           <Paragraph>
-            Solving Cubes, Listening to music,Playing Football
+            Solving Cubes, Listening to music,Playing Football.
           </Paragraph>
         </Section>
 

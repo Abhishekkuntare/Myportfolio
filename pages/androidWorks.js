@@ -5,12 +5,9 @@ import {
   Text,
   Stack,
   Image,
-  Button,
-  Badge
+  Button
 } from '@chakra-ui/react'
-import Link from 'next/link'
 import android from '../Data/android.json'
-import git from '../public/images/androidApp/git.png'
 const IMAGE =
   'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
 
@@ -63,16 +60,14 @@ function AndroidWorks() {
                 />
               </Box>
               <Stack pt={10} align={'center'}>
-                <Badge borderRadius={3} padding={1}>
-                  <Text
-                    padding={2}
-                    color={'gray.500'}
-                    fontSize={'sm'}
-                    textTransform={'uppercase'}
-                  >
-                    {data.name}
-                  </Text>
-                </Badge>
+                <Text
+                  padding={2}
+                  fontSize={'sm'}
+                  fontWeight={'900'}
+                  textTransform={'uppercase'}
+                >
+                  {data.name}
+                </Text>
                 <Heading
                   fontSize={'14px'}
                   textAlign="center"
@@ -82,14 +77,34 @@ function AndroidWorks() {
                   {data.desc}
                 </Heading>
                 <Stack direction={'row'} align={'center'}>
-                  <Button marginTop={5}>
-                    <Text fontWeight={800} fontSize={'xl'}>
-                      <Link href={data.app_link}>Download</Link>
+                  <Button
+                    mt={10}
+                    backgroundColor={'#46D6C1'}
+                    _hover={{
+                      backgroundColor: '#76FAC7'
+                    }}
+                  >
+                    <Text fontWeight={500} fontSize={18}>
+                      <a target="_blank" href={data.git_link}>
+                        Download
+                      </a>
                     </Text>
                   </Button>
-                  <Link href={data.git_link}>
-                    <Image width={30} height={30} src={data.git} alt="git" />
-                  </Link>
+                  <Box mt={10}>
+                    <Button
+                      mt={10}
+                      backgroundColor={'#58B0FF'}
+                      _hover={{
+                        backgroundColor: '#CEB5FF'
+                      }}
+                    >
+                      <Text fontWeight={500} fontSize={18}>
+                        <a target="_blank" href={data.git_link}>
+                          Source Code
+                        </a>
+                      </Text>
+                    </Button>
+                  </Box>
                 </Stack>
               </Stack>
             </Box>
